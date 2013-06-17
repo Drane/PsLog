@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Karma example setup with Require.js</title>
+    <script  src="src/PsLogger.js"></script>
+</head>
+
+<body>
+
+<script>
+    var prevChar = -1;
+    var key_ctrl = 17;
+    var key_l = 76;
+    window.addEventListener('keydown', function (e) {
+        //console.debug('keydown e.keyCode :', e.keyCode);
+        if(prevChar == key_ctrl && e.keyCode == key_l){
+            console.log('CTRL+L pressed');
+        }
+        prevChar = e.keyCode;
+    });
+</script>
+</body>
+</html>
